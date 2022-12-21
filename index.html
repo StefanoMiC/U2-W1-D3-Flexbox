@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            max-width: 900px;
+            margin-inline: auto;
+            min-height: 50vh;
+            background-color: #ebebeb;
+
+            display: flex;
+
+        }
+
+        .box {
+            width: 100px;
+            /* height: 100px; */
+        }
+
+        .antique {
+            background-color: antiquewhite;
+        }
+
+        .coral {
+            background-color: coral;
+        }
+
+        .aqua {
+            background-color: aquamarine;
+        }
+
+        .palered {
+            background-color: palevioletred;
+
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body {
+            padding: 1rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        button {
+            background-color: palevioletred;
+            border: none;
+            padding: .5rem 1rem;
+            border-radius: 6px;
+            margin-top: auto;
+        }
+
+        /* | 1000px ------------------------- 1400px |   */
+        @media (min-width: 1000px) and (max-width: 1400px) {
+            h1 {
+                color: red;
+                font-size: 105px;
+            }
+        }
+
+        /* | 1600px ------------------------- infinite  */
+        @media (min-width: 1600px) {
+            h1 {
+                color: blue;
+                font-size: 105px;
+            }
+        }
+
+        /* | 0px ----------------- 700px | */
+        @media(max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <nav>
+        <div class="box aqua" style="width: 50px; height: 50px;"></div>
+        <ul>
+            <li>menu-item1</li>
+            <li>menu-item2</li>
+            <li>menu-item3</li>
+            <li>menu-item4</li>
+            <li>menu-item5</li>
+        </ul>
+    </nav> -->
+
+    <!-- <div class="container"> -->
+    <!-- <div class="box antique"> <img src="https://1000marche.net/wp-content/uploads/2020/03/Facebook-logo-500x313.png"
+                alt=""> Lorem, ipsum dolor.</div>
+        <div class="box coral"><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/600px-Instagram_logo_2022.svg.png"
+                alt=""> Lorem, ipsum dolor.</div>
+        <div class="box aqua"> <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
+                alt=""> Lorem, ipsum dolor.</div>
+        <div class="box palered"><img
+                src="https://upload.wikimedia.org/wikipedia/it/0/09/Twitter_bird_logo.png?20160903181542" alt=""> Lorem,
+            ipsum dolor.</div> -->
+    <!-- <div class="box antique"></div>
+        <div class="box coral"></div>
+        <div class="box aqua"></div>
+        <div class="box palered"></div> -->
+
+    <!-- </div> -->
+
+    <h1>Main Title</h1>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1671571222666-241457a047ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                alt="card image" />
+
+            <div class="card-body">
+                <h4>Card Title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+
+                <button class="btn">Click Me</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1671571222666-241457a047ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                alt="card image" />
+
+            <div class="card-body">
+                <h4>Card Title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. </p>
+
+                <button class="btn">Click Me</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1671571222666-241457a047ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                alt="card image" />
+
+            <div class="card-body">
+                <h4>Card Title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+
+                <button class="btn">Click Me</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1671571222666-241457a047ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+                alt="card image" />
+
+            <div class="card-body">
+                <h4>Card Title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+
+                <button class="btn">Click Me</button>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

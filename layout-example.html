@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            height: 80px;
+            background-color: black;
+        }
+
+        .flex {
+            display: flex;
+            height: calc(100vh - 80px)
+        }
+
+        aside {
+            background-color: aqua;
+            width: 300px;
+        }
+
+        main {
+            background-color: coral;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 768px) {
+            .flex {
+                flex-direction: column;
+            }
+
+            aside {
+                width: initial;
+                min-height: 160px;
+            }
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <!-- 
+    1) Navbar
+    2) Sidebar
+    3) Main content
+    4) Sidebar should be aligned with the main content -->
+
+    <header>
+
+    </header>
+
+    <div class="flex">
+        <aside>
+            1
+        </aside>
+
+        <main>
+            2
+        </main>
+    </div>
+
+</body>
+
+</html>
